@@ -1,1 +1,2 @@
 # DigitalTwin
+![FlowChart](./DataFlowDiagram.png)
