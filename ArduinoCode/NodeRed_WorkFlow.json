@@ -1,0 +1,295 @@
+[
+    {
+        "id": "80bac308a04077d0",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d59784c2f3ea1527",
+        "type": "comment",
+        "z": "80bac308a04077d0",
+        "name": "Send json data to Unity",
+        "info": "",
+        "x": 140,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d6bcc3296518e55a",
+        "type": "inject",
+        "z": "80bac308a04077d0",
+        "name": "Json Data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"roboticArm\":{\"picker\":{\"degrees\":26,\"description\":\"Picker joint moves to 26 degrees.\"},\"upperJoint\":{\"degrees\":14,\"description\":\"Upper joint moves to 14 degrees.\"},\"lowerJoint\":{\"degrees\":19,\"description\":\"Lower joint moves to 19 degrees.\"}},\"priorityList\":[\"lowerJoint\",\"upperJoint\",\"picker\"],\"description\":\"The robotic arm performs movements in a specific order: lower joint first, followed by upper joint, then picker. The movement order is important for precise motion control.\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "02e87683216db90e"
+            ]
+        ]
+    },
+    {
+        "id": "faf76443e2cc6b33",
+        "type": "mqtt out",
+        "z": "80bac308a04077d0",
+        "name": "Publish KukaRobo Simulation Data",
+        "topic": "satorixr/digitaltwin/kuka",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "118ae671ca32b2bc",
+        "x": 660,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "02e87683216db90e",
+        "type": "function",
+        "z": "80bac308a04077d0",
+        "name": "Extract important data",
+        "func": "// Extract the priority list and the data\nlet priorityList = msg.payload.priorityList;\nlet roboticArm = msg.payload.roboticArm;\nlet servoMotor = msg.payload.servoMotor;\nlet led = msg.payload.led;\n\n// Iterate over the priority list and send individual actions one by one\nlet index = 0;  // Track the current action index\n\n// Save the priority list and the current index in context to retain state\ncontext.priorityList = priorityList;\ncontext.index = index;\n\n// Function to send the next action\nfunction sendNextAction() {\n    // Get the current action from the priority list\n    let action = priorityList[context.index];\n    let actionData = {};\n\n    // Based on the action, prepare the data to send\n    switch (action) {\n        case 'upperJoint':\n            actionData = {\n                component: 'Upper Joint',\n                degrees: roboticArm.upperJoint.degrees\n            };\n            break;\n\n        case 'picker':\n            actionData = {\n                component: 'Picker',\n                degrees: roboticArm.picker.degrees\n            };\n            break;\n\n        case 'lowerJoint':\n            actionData = {\n                component: 'Lower Joint',\n                degrees: roboticArm.lowerJoint.degrees\n            };\n            break;\n\n        case 'baseJoint':\n            actionData = {\n                component: 'Base Joint',\n                degrees: roboticArm.baseJoint.degrees\n            };\n            break;\n\n        case 'servoMotor':\n            actionData = {\n                component: 'Servo Motor',\n                degrees: servoMotor.degrees\n            };\n            break;\n\n        case 'led':\n            actionData = {\n                component: 'LED',\n                ledState: led.ledState\n            };\n            break;\n\n        default:\n            break;\n    }\n\n    // Send the current action with the component name\n    node.send({ payload: actionData });\n\n    // Increment the index to move to the next action\n    context.index++;\n\n    // If there are more actions, schedule the next one\n    if (context.index < priorityList.length) {\n        setTimeout(sendNextAction, 1000); // Adjust delay as needed\n    }\n}\n\n// Start sending actions\nsendNextAction();\n\n// End the function node\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "faf76443e2cc6b33"
+            ]
+        ]
+    },
+    {
+        "id": "81ac8435496728be",
+        "type": "comment",
+        "z": "80bac308a04077d0",
+        "name": "Send json data to Unity abt Led ",
+        "info": "",
+        "x": 170,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b59721be3579cdfa",
+        "type": "inject",
+        "z": "80bac308a04077d0",
+        "name": "Json Data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "str",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "c664eb7086dd41fb"
+            ]
+        ]
+    },
+    {
+        "id": "c664eb7086dd41fb",
+        "type": "mqtt out",
+        "z": "80bac308a04077d0",
+        "name": "Publish KukaRobo Simulation Data",
+        "topic": "satorixr/digitaltwin/led",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "118ae671ca32b2bc",
+        "x": 453.1041717529297,
+        "y": 280.09722900390625,
+        "wires": []
+    },
+    {
+        "id": "f87de23f1c97350b",
+        "type": "mqtt out",
+        "z": "80bac308a04077d0",
+        "name": "Publish KukaRobo Simulation Data",
+        "topic": "satorixr/digitaltwin/motor",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "118ae671ca32b2bc",
+        "x": 460,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4c5b69e93a45b634",
+        "type": "inject",
+        "z": "80bac308a04077d0",
+        "name": "Json Data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "59",
+        "payloadType": "str",
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "f87de23f1c97350b"
+            ]
+        ]
+    },
+    {
+        "id": "d0a846ad288ea94b",
+        "type": "inject",
+        "z": "80bac308a04077d0",
+        "name": "Json Data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "120",
+        "payloadType": "str",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "f87de23f1c97350b"
+            ]
+        ]
+    },
+    {
+        "id": "bf8af7692e28e5a6",
+        "type": "inject",
+        "z": "80bac308a04077d0",
+        "name": "Json Data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "str",
+        "x": 133.1041717529297,
+        "y": 320.09722900390625,
+        "wires": [
+            [
+                "c664eb7086dd41fb"
+            ]
+        ]
+    },
+    {
+        "id": "ee8bbb6b4ec83b7f",
+        "type": "inject",
+        "z": "80bac308a04077d0",
+        "name": "Json Data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"roboticArm\":{\"picker\":{\"degrees\":-26,\"description\":\"Picker joint moves to 25 degrees.\"},\"upperJoint\":{\"degrees\":-14,\"description\":\"Upper joint moves to 13 degrees.\"},\"lowerJoint\":{\"degrees\":-19,\"description\":\"Lower joint moves to 19 degrees.\"}},\"priorityList\":[\"lowerJoint\",\"upperJoint\",\"picker\"],\"description\":\"The robotic arm performs movements in a specific order: lower joint first, followed by upper joint, then picker. The movement order is important for precise motion control.\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "02e87683216db90e"
+            ]
+        ]
+    },
+    {
+        "id": "be0a70a566b576c3",
+        "type": "comment",
+        "z": "80bac308a04077d0",
+        "name": "Send json data to Unity abt Motor",
+        "info": "",
+        "x": 170,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "118ae671ca32b2bc",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
