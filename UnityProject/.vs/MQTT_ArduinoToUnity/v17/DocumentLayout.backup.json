@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\student\\MQTT_ArduinoToUnity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|c:\\users\\student\\mqtt_arduinotounity\\assets\\scripts\\sensordatavisualization\\led_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sensordatavisualization\\led_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|c:\\users\\student\\mqtt_arduinotounity\\assets\\scripts\\sensordatavisualization\\armboxinteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sensordatavisualization\\armboxinteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|C:\\Users\\student\\MQTT_ArduinoToUnity\\assets\\scripts\\sensordatavisualization\\ui_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sensordatavisualization\\ui_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|C:\\Users\\student\\MQTT_ArduinoToUnity\\assets\\scripts\\sensordatavisualization\\kuka_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sensordatavisualization\\kuka_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Led_UnityMqtt.cs",
+              "DocumentMoniker": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "ToolTip": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T05:18:13.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArmBoxInteration.cs",
+              "DocumentMoniker": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\ArmBoxInteration.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SensorDataVisualization\\ArmBoxInteration.cs",
+              "ToolTip": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\ArmBoxInteration.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SensorDataVisualization\\ArmBoxInteration.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBYAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T07:52:12.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UI_UnityMqtt.cs",
+              "DocumentMoniker": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "ToolTip": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBsAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T06:34:11.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Kuka_UnityMqtt.cs",
+              "DocumentMoniker": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\Kuka_UnityMqtt.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SensorDataVisualization\\Kuka_UnityMqtt.cs",
+              "ToolTip": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\Kuka_UnityMqtt.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SensorDataVisualization\\Kuka_UnityMqtt.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T06:33:10.268Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

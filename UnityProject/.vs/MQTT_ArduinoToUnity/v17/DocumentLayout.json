@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\student\\MQTT_ArduinoToUnity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|C:\\Users\\student\\MQTT_ArduinoToUnity\\assets\\scripts\\sensordatavisualization\\ui_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sensordatavisualization\\ui_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|c:\\users\\student\\mqtt_arduinotounity\\assets\\scripts\\sensordatavisualization\\led_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sensordatavisualization\\led_unitymqtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|c:\\users\\student\\mqtt_arduinotounity\\assets\\scripts\\processmqttevents\\mqttunityclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60187AC-9509-41E8-2A65-95CF730EE402}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\processmqttevents\\mqttunityclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MqttUnityClient.cs",
+              "DocumentMoniker": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\ProcessMqttEvents\\MqttUnityClient.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ProcessMqttEvents\\MqttUnityClient.cs",
+              "ToolTip": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\ProcessMqttEvents\\MqttUnityClient.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ProcessMqttEvents\\MqttUnityClient.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAA5wAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T05:54:31.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UI_UnityMqtt.cs",
+              "DocumentMoniker": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "ToolTip": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SensorDataVisualization\\UI_UnityMqtt.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T06:34:11.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Led_UnityMqtt.cs",
+              "DocumentMoniker": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "ToolTip": "C:\\Users\\student\\MQTT_ArduinoToUnity\\Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SensorDataVisualization\\Led_UnityMqtt.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T05:18:13.82Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9008e7aef20224a48865d274b0222b0b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ledON: {fileID: 2100000, guid: f8f16e0115692ca4abae133c51e50615, type: 2}
+  - ledOFF: {fileID: 2100000, guid: f47a5c8cb3f17a84eb0c447aeac23cc3, type: 2}
+  - renderer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
