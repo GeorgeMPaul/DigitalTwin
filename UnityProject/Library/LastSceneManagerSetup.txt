@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/DigitalTwin.unity
+- path: Assets/Scenes/SerialPortCom.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -1799,6 +1799,7 @@ MonoBehaviour:
   brokerAddress: broker.hivemq.com
   brokerPort: 1883
   autoConnect: 1
+  sendDataInputField: {fileID: 1421043755}
 --- !u!1 &940111481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3741,7 +3742,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.0073235966, y: 0.007824791, z: 0.007566267}
   m_Center: {x: 0.00021952797, y: 0.004231361, z: -0.0014674292}

@@ -1,18 +1,19 @@
 using M2MqttUnity;
 using UnityEngine;
+using UnityEngine.UI;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
 public class Motor_UnityMqtt : MqttUnityClient
 {
-
+    public InputField sendDataInputField;
     private string MQTTtopicName = "satorixr/digitaltwin/motor";
 
     protected override void DecodeMessage(string topic, byte[] message)
     {
         string angle = System.Text.Encoding.UTF8.GetString(message);
-        Debug.Log("Motor rotated: " + angle);
+        //Debug.Log("Motor rotated: " + angle);
 
-        RotateMotor(angle);
+        RotateMotor(sendDataInputField.text);
     }
 
     private void RotateMotor(string angle)

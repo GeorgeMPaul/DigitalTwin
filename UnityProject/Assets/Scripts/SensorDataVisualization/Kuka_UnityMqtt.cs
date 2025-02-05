@@ -17,7 +17,6 @@ public class Kuka_UnityMqtt : MqttUnityClient
     protected override void DecodeMessage(string topic, byte[] message)
     {
         string msg = System.Text.Encoding.UTF8.GetString(message);
-        //Debug.Log("KukaRobo Json: " + msg);
 
         RobotAction action = JsonUtility.FromJson<RobotAction>(msg);
 
@@ -26,7 +25,6 @@ public class Kuka_UnityMqtt : MqttUnityClient
             GameObject componentObject = GameObject.Find(action.component);
             if (componentObject != null)
             {
-                //Debug.Log("Found: " + action.component);
                 StartCoroutine(RotateComponentSmoothly(componentObject, action.degrees, rotationDuration));
             }
             else
@@ -40,7 +38,6 @@ public class Kuka_UnityMqtt : MqttUnityClient
         }
     }
 
-    // Coroutine to rotate the component smoothly over time
     private System.Collections.IEnumerator RotateComponentSmoothly(GameObject componentObject, float degrees, float duration)
     {
         // Get the current euler angle
@@ -59,7 +56,6 @@ public class Kuka_UnityMqtt : MqttUnityClient
             yield return null;
         }
 
-        // Ensure final angle matches the target angle exactly
         componentObject.transform.rotation = Quaternion.Euler(currentAnglex, currentAngley, targetAngle);
     }
 
