@@ -240,10 +240,9 @@ To verify the Unity connection is working:
 
 ## 👨‍💻 Project Information
 
-- **Intern:** [Your Name]
-- **Mentor:** Praveen Krishna
-- **Project Duration:** [Start Date] - [End Date]
-- **Contact:** [Your Email]
+- **Intern:** [George Mathew Paul]
+- **Project Duration:** [Dec 2024] - [April 2025]
+- **Contact:** [georgemathewpaul2021@gmail.com]
 
 ---
 
