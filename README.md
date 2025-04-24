@@ -1,4 +1,4 @@
-# Arduino to ROS2 to Unity Integration
+# Digital twin with IOT devices using ROS-Unity Integration
 
 This project connects an **Arduino Uno** (with an **MPU9250 IMU sensor**) to **ROS2 Jazzy** via WSL on Windows, and publishes/receives data to/from **Unity** using the ROS–Unity bridge.
 
@@ -12,9 +12,10 @@ This project connects an **Arduino Uno** (with an **MPU9250 IMU sensor**) to **R
 
 ### 🧰 Wiring Connections
 Ensure the IMU is properly connected to the Arduino according to your sensor's specifications.
+[http://wiki.sunfounder.cc/index.php?title=IMU_Breakout_-_MPU-9250](http://wiki.sunfounder.cc/index.php?title=IMU_Breakout_-_MPU-9250).
 
 ### ⬆️ Upload Code
-1. Open the provided Arduino sketch.
+1. Open MovementOfRobot.ino
 2. Select the correct board and port in the IDE.
 3. Click **Upload**.
 
@@ -81,12 +82,6 @@ ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=172.29.2
 Check Unity topic:
 ```bash
 ros2 topic echo pos_rot
-```
-
-### 🖥️ Unity Subscriber (Unity to ROS)
-Run Unity's ROS publishing demo:
-```bash
-ros2 run unity_robotics_demo color_publisher
 ```
 
 ### 🔁 Full Restart Commands (Quick Reuse)
