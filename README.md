@@ -4,8 +4,6 @@ This project implements a digital twin system that connects an **Arduino Uno** w
 
 ## Overview
 
-![System Architecture](https://via.placeholder.com/800x400?text=Digital+Twin+System+Architecture)
-
 ### Key Components
 - **Hardware Layer**: Arduino Uno board with MPU9250 IMU sensor
 - **Middleware Layer**: ROS2 Jazzy running in WSL2 on Windows
@@ -51,7 +49,7 @@ Data is transmitted via serial at 115200 baud rate in JSON format:
 
 ### ✅ Prerequisites
 - Windows 10/11 with WSL2 enabled
-- Ubuntu 22.04 LTS installed in WSL2
+- Ubuntu 24.04 LTS installed in WSL2
 - ROS2 Jazzy installed in WSL2
 - usbipd-win installed on Windows host
 
